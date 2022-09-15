@@ -112,7 +112,7 @@ body, html {
               <img src="./breadandbeautiful/logo2.JPG" style="width:100%" onclick="onClick(this)">
               <img src="./breadandbeautiful/ixora.JPG" style="width:100%" onclick="onClick(this)">
               <img src="./breadandbeautiful/coasters.JPG" style="width:100%" onclick="onClick(this)">
-              <img src="./breadandbeautiful/cactus.JPG" style="width:100%" onclick="onClick1('./breadandbeautiful/cactus_details.jpg')>
+              <img src="./breadandbeautiful/cactus.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')>
             </div>
           </div>
   <!-- for modal images -->  
@@ -164,13 +164,10 @@ function openMenu(evt, menuName) {
 document.getElementById("myLink").click();
   
 function onClick(element) {
-document.getElementById("img01").src = element.src;
-document.getElementById("modal01").style.display = "block";
-}
-function onClick1(element) {
 document.getElementById("img01").src = element;
 document.getElementById("modal01").style.display = "block";
 }
+
 </script>
 
 </body>
