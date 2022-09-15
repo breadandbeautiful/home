@@ -89,11 +89,11 @@ body, html {
   
     <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third w3-padding-16">
-              <img src="./breadandbeautiful/chapfa.JPG" style="width:100%">
-              <img src="./breadandbeautiful/chrysanthemum.JPG" style="width:100%">
-              <img src="./breadandbeautiful/chrysanthemum2.JPG" style="width:100%">
-              <img src="./breadandbeautiful/nameplate2.JPG" style="width:100%">
-              <img src="./breadandbeautiful/fridgemagnet.JPG" style="width:100%">
+              <img src="./breadandbeautiful/chapfa.JPG" style="width:100%" onclick="onClick(this)">
+              <img src="./breadandbeautiful/chrysanthemum.JPG" style="width:100%" onclick="onClick(this)">
+              <img src="./breadandbeautiful/chrysanthemum2.JPG" style="width:100%" onclick="onClick(this)">
+              <img src="./breadandbeautiful/nameplate2.JPG" style="width:100%" onclick="onClick(this)">
+              <img src="./breadandbeautiful/fridgemagnet.JPG" style="width:100%" onclick="onClick(this)">
              <!-- <img src="./breadandbeautiful/ixora.JPG" style="width:100%"> -->
             </div>
           
@@ -115,8 +115,13 @@ body, html {
               <img src="./breadandbeautiful/cactus.JPG" style="width:100%">
             </div>
           </div>
-    
-
+  <!-- for modal images -->  
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom">
+          <img id="img01" style="width:100%">
+        </div>
+  </div>
 <!-- Contact/Area Container -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
@@ -157,6 +162,11 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
 document.getElementById("myLink").click();
+  
+function onClick(element) {
+document.getElementById("img01").src = element.src;
+document.getElementById("modal01").style.display = "block";
+}
 </script>
 
 </body>
