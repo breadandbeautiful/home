@@ -89,33 +89,41 @@ body, html {
   
     <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
             <div class="w3-third w3-padding-16">
-              <img src="./breadandbeautiful/chapfa.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/chrysanthemum.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/chrysanthemum2.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/nameplate2.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/fridgemagnet.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/chapfa.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/chrysanthemum.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/chrysanthemum2.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/nameplate2.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/fridgemagnet.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
              <!-- <img src="./breadandbeautiful/ixora.JPG" style="width:100%"> -->
             </div>
           
             <div class="w3-third w3-padding-16">
-              <img src="./breadandbeautiful/logo.jpg" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/nameplate.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/nameplate1.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/perfumebox.jpg" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/logo.jpg" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/nameplate.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/nameplate1.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/perfumebox.jpg" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
              <!-- <img src="./breadandbeautiful/coasters.JPG" style="width:100%"> -->
               <!--<img src="./breadandbeautiful/nameplate2.JPG" style="width:100%"> -->
             </div>
           
             <div class="w3-third w3-padding-16">
-              <img src="./breadandbeautiful/jewelery.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.JPG')">
+              <img src="./breadandbeautiful/jewelery.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.JPG')">
              <!-- <img src="./breadandbeautiful/logo1.jpg" style="width:100%" onclick="onClick(this)"> -->
-              <img src="./breadandbeautiful/logo2.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/ixora.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/coasters.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')">
-              <img src="./breadandbeautiful/cactus.JPG" style="width:100%" onclick="onClick(this,'./breadandbeautiful/cactus_details.jpg')>
+              <img src="./breadandbeautiful/logo2.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/ixora.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/coasters.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')">
+              <img src="./breadandbeautiful/cactus.JPG" style="width:100%" onclick="onClick('./breadandbeautiful/cactus_details.jpg')>
             </div>
           </div>
-  
+ 
+   <!-- for modal images -->  
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom">
+          <img id="img01" style="width:100%">
+        </div>
+  </div>
+                                            
 <!-- Contact/Area Container -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
@@ -134,13 +142,7 @@ body, html {
 
 <!-- End page content -->
 </div>
-<!-- for modal images -->  
-  <div id="modal01" class="w3-modal" onclick="this.style.display='none',1">
-        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-        <div class="w3-modal-content w3-animate-zoom">
-          <img id="img01" style="width:100%">
-        </div>
-  </div>
+
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
   <p>Powered by love :*</a></p>
@@ -149,7 +151,7 @@ body, html {
 <script>
 
   
-function onClick(this,element) {
+function onClick(element) {
 document.getElementById("img01").src = element;
 document.getElementById("modal01").style.display = "block";
 }
